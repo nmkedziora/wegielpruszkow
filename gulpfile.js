@@ -14,10 +14,7 @@ var stylish = require('jshint-stylish');
 
 // ---------- MAIN TASKS ---------- //
 gulp.task('serve', function(callback) {
-    runSequence([
-        'sass',
-        'browserSync',
-    ], 'watch', callback);
+    runSequence('browserSync', 'watch', callback);
 });
 
 gulp.task('build', function(callback) {
