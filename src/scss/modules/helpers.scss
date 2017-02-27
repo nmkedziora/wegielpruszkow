@@ -1,0 +1,25 @@
+/* Custom utility classes */
+
+/* fonts */
+.w700 { font-weight: 700; }
+
+/* text alignment */
+.text-right { text-align: right; }
+
+/* margins */
+.m-t-0 { margin-top: 0; }
+.m-t-65 { margin-top: 65px; }
+
+/* paddings */
+.p-t-20 { padding-top: 20px; }
+
+/* mobile visibility */
+.mobile-hidden {
+    display: none;
+}
+
+@media screen and (min-width: 550px) {
+    .mobile-hidden {
+        display: block;
+    }
+}

@@ -1,0 +1,14 @@
+.wpr-icon {
+    i {
+        color: #FFF;
+    }
+    a {
+        font-weight: 700;
+    }
+}
+
+.wpr-icon--primary {
+    i {
+        color: $theme-color;
+    }
+}
