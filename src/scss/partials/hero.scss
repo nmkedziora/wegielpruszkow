@@ -1,0 +1,25 @@
+.wpr-hero {
+    background-image: url("../images/background-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.wpr-hero--text {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-weight: 700;
+    padding: 10px;
+    margin: 20px auto;
+    width: 50%;
+    font-size: 1.2em;
+    @media screen and (min-width: 750px) {
+        width: 32%;
+    }
+    p {
+        margin-bottom: 0;
+        padding: 5px 0;
+    }
+
+}

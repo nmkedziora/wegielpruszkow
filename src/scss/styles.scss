@@ -1,9 +1,12 @@
-@import "partials/fonts";
-
+@import "modules/fonts";
 @import "modules/variables";
+@import "modules/typography";
+
 @import "modules/helpers";
 
-@import "partials/skeleton-overrides";
-@import "partials/typography";
-@import "partials/icons";
+@import "modules/icons";
+
+@import "modules/skeleton-overrides";
+
 @import "partials/header";
+@import "partials/hero";

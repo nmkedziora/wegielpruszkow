@@ -2,9 +2,6 @@ header {
     a {
         color: $main-color;
         text-decoration: none;
-        &:hover {
-            color: $theme-color;
-        }
     }
 }
 
@@ -14,6 +11,7 @@ header {
         font-size: 0.9em;
         margin: 0;
         text-align: right;
+        font-weight: 700;
     }
     li {
         text-transform: uppercase;
@@ -23,6 +21,9 @@ header {
 
 .wpr-nav--mobile {
     border-top: 1px solid #E1E1E1;
+    @media screen and (min-width: 550px) {
+        display: none;
+    }
     li {
         display: inline-block;
         float: left;
@@ -36,20 +37,14 @@ header {
 
 .wpr-nav--horizontal {
     display: none;
+    @media screen and (min-width: 550px) {
+        display: block;
+    }
     li {
         display: inline-block;
         padding: 0 20px;
         &:last-child {
             padding-right: 0;
         }
-    }
-}
-
-@media screen and (min-width: 550px) {
-    .wpr-nav--mobile {
-        display: none;
-    }
-    .wpr-nav--horizontal {
-        display: block;
     }
 }

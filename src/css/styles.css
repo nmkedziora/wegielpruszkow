@@ -40,12 +40,13 @@
   font-style: italic;
 }
 
-/* Custom utility classes */
-/* fonts */
-.w700 {
-  font-weight: 700;
+body {
+  font-family: "Lato", Arial, sans-serif;
+  color: #333;
 }
 
+/* Custom utility classes */
+/* fonts */
 /* text alignment */
 .text-right {
   text-align: right;
@@ -54,6 +55,10 @@
 /* margins */
 .m-t-0 {
   margin-top: 0;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
 }
 
 .m-t-65 {
@@ -74,6 +79,18 @@
   .mobile-hidden {
     display: block;
   }
+}
+
+.wpr-icon i {
+  color: #FFF;
+}
+
+.wpr-icon a {
+  font-weight: 700;
+}
+
+.wpr-icon--primary i {
+  color: #00401f;
 }
 
 .button.button-primary,
@@ -101,21 +118,8 @@ input[type="button"].button-primary:focus {
   border-color: #333;
 }
 
-body {
-  font-family: "Lato", Arial, sans-serif;
-  color: #333;
-}
-
-.wpr-icon i {
-  color: #FFF;
-}
-
-.wpr-icon a {
-  font-weight: 700;
-}
-
-.wpr-icon--primary i {
-  color: #00401f;
+a:hover {
+  color: #666;
 }
 
 header a {
@@ -123,15 +127,12 @@ header a {
   text-decoration: none;
 }
 
-header a:hover {
-  color: #00401f;
-}
-
 .wpr-nav ul {
   list-style-type: none;
   font-size: 0.9em;
   margin: 0;
   text-align: right;
+  font-weight: 700;
 }
 
 .wpr-nav li {
@@ -141,6 +142,12 @@ header a:hover {
 
 .wpr-nav--mobile {
   border-top: 1px solid #E1E1E1;
+}
+
+@media screen and (min-width: 550px) {
+  .wpr-nav--mobile {
+    display: none;
+  }
 }
 
 .wpr-nav--mobile li {
@@ -157,6 +164,12 @@ header a:hover {
   display: none;
 }
 
+@media screen and (min-width: 550px) {
+  .wpr-nav--horizontal {
+    display: block;
+  }
+}
+
 .wpr-nav--horizontal li {
   display: inline-block;
   padding: 0 20px;
@@ -166,11 +179,31 @@ header a:hover {
   padding-right: 0;
 }
 
-@media screen and (min-width: 550px) {
-  .wpr-nav--mobile {
-    display: none;
+.wpr-hero {
+  background-image: url("../images/background-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.wpr-hero--text {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-weight: 700;
+  padding: 10px;
+  margin: 20px auto;
+  width: 50%;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 750px) {
+  .wpr-hero--text {
+    width: 32%;
   }
-  .wpr-nav--horizontal {
-    display: block;
-  }
+}
+
+.wpr-hero--text p {
+  margin-bottom: 0;
+  padding: 5px 0;
 }
