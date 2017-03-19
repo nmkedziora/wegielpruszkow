@@ -46,7 +46,16 @@ body {
 }
 
 /* Custom utility classes */
+/* overall */
+.opacity85 {
+  opacity: 0.85;
+}
+
 /* fonts */
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* text alignment */
 .text-right {
   text-align: right;
@@ -122,6 +131,18 @@ a:hover {
   color: #666;
 }
 
+section {
+  margin-bottom: 35px;
+}
+
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  text-align: center;
+}
+
+section hr {
+  margin-top: 15px;
+}
+
 header a {
   color: #333;
   text-decoration: none;
@@ -151,13 +172,13 @@ header a {
 }
 
 .wpr-nav--mobile li {
-  display: inline-block;
+  display: block;
   float: left;
   box-sizing: border-box;
   text-align: center;
   border-bottom: 1px solid #E1E1E1;
   padding: 15px;
-  width: 50%;
+  width: calc(100%/3);
 }
 
 .wpr-nav--horizontal {
@@ -180,11 +201,14 @@ header a {
 }
 
 .wpr-hero {
-  background-image: url("../images/background-img.jpg");
+  background-image: url("../images/wpr-background-img.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: top center;
 }
 
 .wpr-hero--text {

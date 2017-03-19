@@ -25,3 +25,13 @@ input[type="button"].button-primary:focus {
 a:hover {
     color: $main-grey;
 }
+
+section {
+    margin-bottom: 35px;
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+    }
+    hr {
+        margin-top: 15px;
+    }
+}

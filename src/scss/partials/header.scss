@@ -25,13 +25,13 @@ header {
         display: none;
     }
     li {
-        display: inline-block;
+        display: block;
         float: left;
         box-sizing: border-box;
         text-align: center;
         border-bottom: 1px solid #E1E1E1;
         padding: 15px;
-        width: 50%;
+        width: calc(100%/3);
     }
 }
 
