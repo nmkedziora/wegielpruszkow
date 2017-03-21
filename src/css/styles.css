@@ -51,6 +51,10 @@ body {
   opacity: 0.85;
 }
 
+.block {
+  display: block;
+}
+
 /* fonts */
 .w700 {
   font-weight: 700;
@@ -70,12 +74,12 @@ body {
 }
 
 /* margins */
-.m-t-0 {
-  margin-top: 0;
-}
-
 .m-b-20 {
   margin-bottom: 20px;
+}
+
+.m-t-0 {
+  margin-top: 0;
 }
 
 .m-t-65 {
@@ -160,15 +164,23 @@ a:hover i {
   color: #666;
 }
 
-section {
+section,
+footer {
   margin-bottom: 35px;
 }
 
-section h1, section h2, section h3, section h4, section h5, section h6 {
+section h1, section h2, section h3, section h4, section h5, section h6,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
   text-align: center;
 }
 
-section hr {
+section hr,
+footer hr {
   margin-top: 15px;
 }
 
