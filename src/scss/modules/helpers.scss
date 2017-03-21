@@ -4,16 +4,20 @@
 .opacity85 { opacity: 0.85; }
 
 /* fonts */
-// .w700 { font-weight: 700; }
+.w700 { font-weight: 700; }
 .uppercase { text-transform: uppercase; }
 
 /* text alignment */
+.text-center { text-align: center; }
 .text-right { text-align: right; }
 
 /* margins */
 .m-t-0 { margin-top: 0; }
 .m-b-20 { margin-bottom: 20px; }
 .m-t-65 { margin-top: 65px; }
+.m-r-5 { margin-right: 5px; }
+.m-r-15 { margin-right: 15px; }
+.m-v-25 { margin: 25px 0; }
 
 /* paddings */
 .p-t-20 { padding-top: 20px; }

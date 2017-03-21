@@ -22,8 +22,15 @@ input[type="button"].button-primary:focus {
     border-color: $main-color;
 }
 
-a:hover {
-    color: $main-grey;
+a {
+    color: $main-color;
+    text-decoration: none;
+    &:hover {
+        color: $main-grey;
+        i {
+            color: $main-grey;
+        }
+    }
 }
 
 section {
