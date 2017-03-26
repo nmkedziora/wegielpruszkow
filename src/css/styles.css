@@ -82,6 +82,10 @@ body {
   margin-top: 0;
 }
 
+.m-t-25 {
+  margin-top: 25px;
+}
+
 .m-t-65 {
   margin-top: 65px;
 }
@@ -103,13 +107,44 @@ body {
   padding-top: 20px;
 }
 
+.p-v-50 {
+  padding: 50px 0;
+}
+
 /* mobile visibility */
-.mobile-hidden {
+.mobile-hidden,
+.phablet-visible,
+.tablet-visible,
+.desktop-visible {
   display: none;
 }
 
 @media screen and (min-width: 550px) {
   .mobile-hidden {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .mobile-visible {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 750px) {
+  .phablet-visible {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+  .tablet-visible {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .desktop-visible {
     display: block;
   }
 }
@@ -237,7 +272,7 @@ footer hr {
 }
 
 .wpr-hero {
-  background-image: url("../images/wpr-background-img.jpg");
+  background-image: url("../images/wpr-background-img1.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
