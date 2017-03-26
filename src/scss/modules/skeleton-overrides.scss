@@ -43,3 +43,17 @@ footer {
         margin-top: 15px;
     }
 }
+
+ul {
+  list-style: circle outside;
+  margin-left: 1.5rem;
+}
+
+li {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul li ul {
+    margin-left: 15px;
+}
