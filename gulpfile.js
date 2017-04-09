@@ -22,27 +22,22 @@ gulp.task('serve', function(callback) {
     runSequence('browserSync', 'watch', callback);
 });
 
+gulp.task('deploy', function(callback) {
+    runSequence('build', 'commit', 'push', callback);
+});
+
+// ---------- DEPLOYMENT TASKS ---------- //
+// Builds dist directory
 gulp.task('build', function(callback) {
     runSequence(
         'clean:dist',
         'sass',
         ['create:dist', 'images', 'fonts'],
-        callback);
+        callback
+    );
 });
 
-gulp.task('deploy', function(callback) {
-    runSequence('build', 'commit', 'push');
-});
-
-gulp.task('push', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages({
-        cname: 'wegielpruszkow.pl',
-        message: message,
-        cacheDir: '.dist'
-    }));
-});
-
+// Takes commit message and assigns it to message variable
 gulp.task('commit', function() {
     var deferred = Q.defer();
 
@@ -59,9 +54,15 @@ gulp.task('commit', function() {
     return deferred.promise;
 });
 
-
-
-
+// Pushes changes to gh-pages with given commit message and CNAME file
+gulp.task('push', function() {
+    return gulp.src('./dist/**/*')
+    .pipe(ghPages({
+        cname: 'wegielpruszkow.pl',
+        message: message,
+        cacheDir: '.dist'
+    }));
+});
 
 // ---------- DEVELOPMENT TASKS ---------- //
 // Runs static Server
@@ -81,7 +82,7 @@ gulp.task('watch', function() {
     gulp.watch('./src/scripts/main.js').on('change', browserSync.reload);
 });
 
-// Compile .scss into .css & auto-inject into browser
+// Compiles .scss into .css & auto-inject into browser
 gulp.task('sass', function() {
     return gulp.src('./src/scss/styles.scss')
         .pipe(sass({
