@@ -11,6 +11,11 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
+var ghPages = require('gulp-gh-pages-cname');
+var prompt = require('gulp-prompt');
+var Q = require('q');
+
+var message = '';
 
 // ---------- MAIN TASKS ---------- //
 gulp.task('serve', function(callback) {
@@ -24,6 +29,39 @@ gulp.task('build', function(callback) {
         ['create:dist', 'images', 'fonts'],
         callback);
 });
+
+gulp.task('deploy', function(callback) {
+    runSequence('build', 'commit', 'push');
+});
+
+gulp.task('push', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages({
+        cname: 'wegielpruszkow.pl',
+        message: message,
+        cacheDir: '.dist'
+    }));
+});
+
+gulp.task('commit', function() {
+    var deferred = Q.defer();
+
+    gulp.src('./dist/**/*')
+    .pipe(prompt.prompt({
+        type: 'input',
+        name: 'message',
+        message: 'What is your commit message?'
+    }, function(res){
+        message = res.message
+        deferred.resolve();
+    }));
+
+    return deferred.promise;
+});
+
+
+
+
 
 // ---------- DEVELOPMENT TASKS ---------- //
 // Runs static Server
