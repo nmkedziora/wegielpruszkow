@@ -73,7 +73,7 @@ gulp.task('create:dist', function () {
 
 // Minifies and creates .images in .dist
 gulp.task('images', function(){
-    return gulp.src('./src/images/**/*.+(png|jpg|gif|svg)')
+    return gulp.src('./src/images/**/*.+(png|jpg|gif|svg|ico)')
         // Caching images that ran through imagemin
         .pipe(cache(imagemin({
             interlaced: true
