@@ -6,7 +6,14 @@
         position: absolute;
         left: 0;
     }
-    p {
+}
+
+.wpr-icon {
+    span {
+        display: block;
         margin-bottom: 0.5rem;
+        a {
+            white-space: nowrap;
+        }
     }
 }
