@@ -12,3 +12,23 @@
         color: $theme-color;
     }
 }
+
+.wpr-icon--scroll-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99;
+    @media screen and (min-width: 1000px) {
+        right: 200px;
+    }
+    &.fade-in {
+        visibility: visible;;
+        opacity: 1;
+        transition: visibility 0s linear 0s,opacity .5s 0s;
+    }
+    &.fade-out {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear .3s,opacity .5s 0s;
+    }
+}

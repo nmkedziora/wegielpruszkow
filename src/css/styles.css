@@ -153,6 +153,31 @@ body {
   color: #00401f;
 }
 
+.wpr-icon--scroll-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99;
+}
+
+@media screen and (min-width: 1000px) {
+  .wpr-icon--scroll-top {
+    right: 200px;
+  }
+}
+
+.wpr-icon--scroll-top.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s,opacity .5s 0s;
+}
+
+.wpr-icon--scroll-top.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear .3s,opacity .5s 0s;
+}
+
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
