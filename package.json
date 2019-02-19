@@ -17,20 +17,22 @@
   },
   "homepage": "https://github.com/nmkedziora/wegielpruszkow-vol2#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.5",
-    "gulp-clean-css": "^3.0.3",
-    "gulp-gh-pages-cname": "^0.5.2",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-jshint": "^2.0.4",
-    "gulp-prompt": "^0.2.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.1",
-    "gulp-useref": "^3.1.2",
-    "jshint": "^2.9.4",
-    "jshint-stylish": "^2.2.1",
-    "run-sequence": "^1.2.2"
-  }
+    "browser-sync": "2.18.8",
+    "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-cache": "0.4.5",
+    "gulp-clean-css": "3.0.3",
+    "gulp-gh-pages-cname": "0.5.2",
+    "gulp-imagemin": "3.1.1",
+    "gulp-jshint": "2.0.4",
+    "gulp-prompt": "0.2.0",
+    "gulp-sass": "3.1.0",
+    "gulp-uglify": "2.0.1",
+    "gulp-useref": "3.1.2",
+    "jshint": "2.9.4",
+    "jshint-stylish": "2.2.1",
+    "q": "^1.5.1",
+    "run-sequence": "1.2.2"
+  },
+  "dependencies": {}
 }
